@@ -4,6 +4,7 @@ joinn = require '../src/joinn'
 
 tests =
     '': [[]]
+    'joinn': [['j','i', 'n'], 'o', 'n']
     'John, Paul, George and Ringo': [['John', 'Paul', 'George', 'Ringo']]
     'John, Paul, George and Ringo': [['John', 'Paul', 'George', 'Ringo'], ', ', ' and ']
     'John, Paul, George & Ringo': [['John', 'Paul', 'George', 'Ringo'], ', ', ' & ']
