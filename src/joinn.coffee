@@ -1,8 +1,8 @@
-module.exports = (array, glue = ', ', lastGlue = ' and ') ->
+module.exports = (originalArray, glue = ', ', lastGlue = ' and ') ->
+    array = originalArray.slice(0)
     switch array.length
         when 0 then return ''
         when 1 then return array.pop()
         else
-            array2 = array.slice(0)
-            last = array2.pop()
-            return array2.join(glue) + lastGlue + last
+            last = array.pop()
+            return array.join(glue) + lastGlue + last

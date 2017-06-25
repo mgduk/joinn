@@ -16,7 +16,12 @@ describe 'joinn', ->
     for s, a of tests
         it "outputs \"#{s}\" given #{JSON.stringify a}", do (s, a) -> -> expect(joinn.apply(this, a)).to.equal s
 
-    it 'does not modify the original array', ->
+    it 'does not modify an original array of three items', ->
         a = ['one', 'two', 'three']
         expect(joinn(a)).to.equal 'one, two and three'
         expect(a).members ['one', 'two', 'three']
+
+    it 'does not modify an original array of one item', ->
+        a = ['one']
+        expect(joinn(a)).to.equal 'one'
+        expect(a).members ['one']
