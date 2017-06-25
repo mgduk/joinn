@@ -3,5 +3,6 @@ module.exports = (array, glue = ', ', lastGlue = ' and ') ->
         when 0 then return ''
         when 1 then return array.pop()
         else
-            last = array.pop()
-            return array.join(glue) + lastGlue + last
+            array2 = array.slice(0)
+            last = array2.pop()
+            return array2.join(glue) + lastGlue + last
