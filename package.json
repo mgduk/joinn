@@ -4,7 +4,7 @@
     "email": "matt@dolan.me"
   },
   "name": "joinn",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Like Array.join, but allows for a different separator between the last two items",
   "main": "lib/joinn.js",
   "scripts": {
